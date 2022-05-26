@@ -1,0 +1,6 @@
+Scenario: Changing the language of application to Arabic.
+Given: User is on page https://symptomate.com/pl/diagnosis
+When: User accept the cookies.
+And: User click on change language button.
+And:  User click on Arabic language from the list.
+Then: The page should be in Arabic.

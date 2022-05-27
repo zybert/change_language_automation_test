@@ -18,6 +18,5 @@ def assert_check_language(locator_language, expected_language):
     response = requests.request("POST", url, json=payload, headers=headers)
     detected_language = json.loads(response.text)["lang"]
 
-    if detected_language == expected_language:
-        assert(detected_language == expected_language), \
-            "Detected language is not correct. Expected '" + expected_language + "' got '" + detected_language + "'"
+    assert(detected_language == expected_language), \
+        "Detected language is not correct. Expected '" + expected_language + "' got '" + detected_language + "'"
